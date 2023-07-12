@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -15,41 +17,124 @@ body {
   flex-direction: column;
   justify-content: center;
   color: #eaeaea;
+  font-family: "Kumbh Sans", sans-serif;
   background: linear-gradient(180deg, #b068e9 0%, #6463e7 100%);
 }
 
 .container {
-  display: grid;
-  grid-template-areas: "imgSide faqSide";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
   width: 920px;
   height: 509px;
   flex-shrink: 0;
   border-radius: 23px;
+  color: #000000;
   background: #fff;
+  font-family: "Kumbh Sans", sans-serif;
   box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.5);
 }
 
-img {
-  width: 40px;
-  height: 40px;
+#leftSection {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 509px;
+  background: url(components/images/illustration-woman-online-desktop.svg),
+    url(components/images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 506px 391px, 964px 890px;
+  background-position: left -91px top 30px, left -546px top -279px;
 }
 
-#leftSection {
-  grid-area: imgSide;
-  height: 509px;
+.box {
+  position: relative;
+  top: 17px;
+  left: -227px;
 }
 
 #rightSection {
-  grid-area: faqSide;
+  width: 50%;
   height: 509px;
+}
+
+h1 {
+  color: #1e1f36;
+  font-family: Kumbh Sans;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 70px;
+  margin-bottom: 45px;
+}
+
+.questions {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 18px;
+}
+
+.questions div {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 350px;
+  height: 35px;
+  flex-shrink: 0;
+  border-bottom: 1px solid #e8e8ea;
+}
+
+
+#quest {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.arrow {
+  width: 10px;
+  height: 6px;
+  flex-shrink: 0;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  color: #4b4c5f;
+  font-family: Kumbh Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h2:hover {
+  cursor: pointer;
+  color: hsl(14, 88%, 65%);
+}
+
+h3 {
+  display: none;
+  color: #787887;
+  font-family: Kumbh Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
 }
 
 .attribution {
   text-align: center;
   font-size: 12px;
-  font-family: "Manrope", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   color: hsl(240, 5%, 91%);
   margin-top: 10px;
 }
