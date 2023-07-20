@@ -21,6 +21,11 @@ body {
   background: linear-gradient(180deg, #b068e9 0%, #6463e7 100%);
 }
 
+.pattern-mobile,
+.illustration-box {
+  display: none;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -135,7 +140,6 @@ h2 {
 }
 
 h3 {
-  /* display: none; */
   color: #787887;
   font-family: Kumbh Sans;
   font-size: 12px;
@@ -171,4 +175,170 @@ a:visited {
 a:hover {
   color: hsl(14, 88%, 65%);
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: #eaeaea;
+    font-family: "Kumbh Sans", sans-serif;
+    background: linear-gradient(180deg, #b068e9 0%, #6463e7 100%);
+  }
+
+  .pattern-mobile {
+    display: flex;
+    position: relative;
+    top: 65px;
+    width: 250px;
+    height: 106px;
+    flex-shrink: 0;
+  }
+
+  .illustration-box {
+    position: relative;
+    display: flex;
+    width: 237px;
+    height: 180px;
+    top: -146px;
+    flex-shrink: 0;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 327px;
+    height: 535px;
+    flex-shrink: 0;
+    border-radius: 23px;
+    background: #fff;
+    box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.5);
+  }
+
+  #leftSection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 169px;
+    height: 53px;
+    background: none;
+  }
+
+  .box {
+    display: none;
+  }
+
+  #rightSection {
+    display: inline-flex;
+    width: 300px;
+    height: 355px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    flex-shrink: 0;
+    margin-top: 28px;
+    margin-bottom: 0px;
+  }
+
+  h1 {
+    color: #1e1f36;
+    font-family: Kumbh Sans;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .questions {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 18px;
+  }
+
+  .questBox {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 279px;
+    flex-shrink: 0;
+    border-bottom: 1px solid #e8e8ea;
+  }
+
+  .quest {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 279px;
+    height: 34px;
+    flex-shrink: 0;
+    margin-bottom: 6px;
+    cursor: pointer;
+  }
+
+  .arrow {
+    width: 10px;
+    height: 6px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .rotate180 {
+    transform: rotate(180deg);
+  }
+
+  h2 {
+    color: #4b4c5f;
+    font-family: Kumbh Sans;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .red {
+    color: #f47b56;
+  }
+
+  .bold {
+    color: #1e1f36;
+    font-family: Kumbh Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  h3 {
+    color: #787887;
+    font-family: Kumbh Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 16px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .attribution {
+    text-align: center;
+    font-size: 10px;
+    font-family: "Kumbh Sans", sans-serif;
+    color: hsl(240, 5%, 91%);
+    margin-top: 10px;
+  }
 }
