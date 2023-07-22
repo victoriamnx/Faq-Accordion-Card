@@ -1,41 +1,30 @@
-var activeQuest = null;
+const dropdownBtns = document.querySelectorAll(".menu-btn");
+let lastOpened = null;
 
-function toggleH3(element) {
-  var h3 = element.nextElementSibling;
-  var arrow = element.querySelector(".arrow");
-  var h2 = element.querySelector(".h2Text");
+dropdownBtns.forEach((btn) =>
+  btn.addEventListener("click", function () {
+    const menuContent = this.nextElementSibling;
+    const arrow = this.querySelector(".arrow");
 
-  if (h3.classList.contains("hidden")) {
-    hideActiveQuest();
-    h3.classList.remove("hidden");
-    arrow.classList.add("rotate180");
-    h2.classList.add("bold");
-    activeQuest = element;
-  } else {
-    h3.classList.add("hidden");
-    arrow.classList.remove("rotate180");
-    h2.classList.remove("bold");
-    activeQuest = null;
-  }
-}
+    if (lastOpened !== null && lastOpened !== menuContent) {
+      // Close the previously opened dropdown
+      lastOpened.classList.remove("show");
+      const lastArrow =
+        lastOpened.previousElementSibling.querySelector(".arrow");
+      lastArrow.classList.remove("rotate");
+      lastOpened.previousElementSibling.style.fontWeight = "normal"; // Return the text to normal
+    }
 
-function hideActiveQuest() {
-  if (activeQuest) {
-    var activeH3 = activeQuest.nextElementSibling;
-    var activeArrow = activeQuest.querySelector(".arrow");
-    var activeH2 = activeQuest.querySelector(".h2Text");
-    activeH3.classList.add("hidden");
-    activeArrow.classList.remove("rotate180");
-    activeH2.classList.remove("bold");
-  }
-}
+    menuContent.classList.toggle("show");
+    arrow.classList.toggle("rotate");
 
-function changeColor(element, isHover) {
-  var h2 = element.querySelector(".h2Text");
+    if (menuContent.classList.contains("show")) {
+      this.style.fontWeight = "bold"; // Make the text bold when dropdown is open
+      this.style.color = " #1E1F36 ";
+    } else {
+      this.style.fontWeight = "normal"; // Return the text to normal when dropdown is closed
+    }
 
-  if (isHover) {
-    h2.classList.add("red");
-  } else {
-    h2.classList.remove("red");
-  }
-}
+    lastOpened = menuContent.classList.contains("show") ? menuContent : null;
+  })
+);
