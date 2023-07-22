@@ -1,4 +1,4 @@
-♡ Frontend Mentor - Faq Accordion Card ♡
+# Frontend Mentor - Faq Accordion Card ♡
 
 This is a solution to the [https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam].
 
@@ -17,8 +17,8 @@ Coming soon
 
 # Links
 
-- Solution URL: [Comming soon]
-- Live Site URL: [Comming soon]
+- Solution URL: Coming soon
+- Live Site URL: [Faq Accordion Card site](https://victoriamnx.github.io/Faq-Accordion-Card/)
 
 # Built with
 
@@ -33,8 +33,8 @@ Coming soon
 # Author
 
 - Name - Victória Nogueira
-- Frontend Mentor - [https://www.frontendmentor.io/profile/victoriamnx]
-- GitHub - [https://github.com/victoriamnx]
+- Frontend Mentor [Profile](https://www.frontendmentor.io/profile/victoriamnx)
+- GitHub [Profile](https://github.com/victoriamnx)
 
 # Acknowledgments
 
