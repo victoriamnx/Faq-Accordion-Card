@@ -89,7 +89,7 @@ body {
 .box {
   position: relative;
   top: 17px;
-  left: -227px;
+  left: -228px;
 }
 
 #rightSection {
@@ -172,6 +172,10 @@ h1 {
 
 .rotate {
   animation: rotateArrow 0.3s ease-in-out forwards;
+}
+
+.menu-btn:hover {
+  color: hsl(14, 88%, 65%);
 }
 
 .attribution {
