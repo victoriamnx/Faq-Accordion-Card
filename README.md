@@ -29,4 +29,3 @@ Coming soon
 - Name - Victória Nogueira
 - Frontend Mentor [Profile](https://www.frontendmentor.io/profile/victoriamnx)
 - GitHub [Profile](https://github.com/victoriamnx)
-
