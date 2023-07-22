@@ -1,5 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
+@keyframes animateFromBottom {
+  from {
+    transform: translate3d(0, 10px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes animateToBottom {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0, 10px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateArrow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -85,7 +116,7 @@ h1 {
   gap: 18px;
 }
 
-.questBox {
+.dropdown-menu {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -94,7 +125,7 @@ h1 {
   border-bottom: 1px solid #e8e8ea;
 }
 
-.quest {
+.menu-btn {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -102,20 +133,6 @@ h1 {
   width: 380px;
   margin-bottom: 13px;
   cursor: pointer;
-}
-
-.arrow {
-  width: 10px;
-  height: 6px;
-  flex-shrink: 0;
-  transition: transform 0.3s ease;
-}
-
-.rotate180 {
-  transform: rotate(180deg);
-}
-
-h2 {
   display: flex;
   align-items: center;
   color: #4b4c5f;
@@ -126,31 +143,35 @@ h2 {
   line-height: normal;
 }
 
-.red {
-  color: #f47b56;
-}
-
-.bold {
-  color: #1e1f36;
-  font-family: Kumbh Sans;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-h3 {
+.drop_container {
+  display: none;
+  margin-bottom: 16px;
+  animation: animateFromBottom 0.3s;
   color: #787887;
   font-family: Kumbh Sans;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  margin-bottom: 16px;
 }
 
-.hidden {
-  display: none;
+.drop_container.show {
+  display: block;
+}
+
+.drop_container.show.animate-out {
+  animation: animateToBottom 0.3s;
+}
+
+.drop_container > .item {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  padding: 10px 0px 0px 0px;
+}
+
+.rotate {
+  animation: rotateArrow 0.3s ease-in-out forwards;
 }
 
 .attribution {
@@ -265,69 +286,64 @@ a:hover {
     gap: 18px;
   }
 
-  .questBox {
+  .questions {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 18px;
+  }
+
+  .dropdown-menu {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     justify-content: flex-start;
     width: 279px;
-    flex-shrink: 0;
     border-bottom: 1px solid #e8e8ea;
   }
 
-  .quest {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
+  .menu-btn {
     width: 279px;
-    height: 34px;
-    flex-shrink: 0;
-    margin-bottom: 6px;
     cursor: pointer;
-  }
-
-  .arrow {
-    width: 10px;
-    height: 6px;
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-  }
-
-  .rotate180 {
-    transform: rotate(180deg);
-  }
-
-  h2 {
     color: #4b4c5f;
-    font-family: Kumbh Sans;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-
-  .bold {
-    color: #1e1f36;
     font-family: Kumbh Sans;
     font-size: 14px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     line-height: normal;
+    margin-bottom: 13px;
   }
 
-  h3 {
+  .drop_container {
+    display: none;
+    margin-bottom: 16px;
+    animation: animateFromBottom 0.3s;
     color: #787887;
     font-family: Kumbh Sans;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
-    margin-bottom: 16px;
   }
 
-  .hidden {
-    display: none;
+  .drop_container.show {
+    display: block;
+  }
+
+  .drop_container.show.animate-out {
+    animation: animateToBottom 0.3s;
+  }
+
+  .drop_container > .item {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    padding: 10px 0px 0px 0px;
+  }
+
+  .rotate {
+    animation: rotateArrow 0.3s ease-in-out forwards;
   }
 
   .attribution {
