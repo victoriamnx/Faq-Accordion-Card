@@ -1,6 +1,6 @@
-# Frontend Mentor - Faq Accordion Card ♡
+# Frontend Mentor - Faq Accordion Card
 
-This is a solution to the [https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam].
+This is a solution to the [Faq Accordion Card challenge](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam).
 
 # Table of contents
 
@@ -11,7 +11,8 @@ This is a solution to the [https://www.frontendmentor.io/challenges/faq-accordio
 
 # Result
 
-Coming soon
+![image](https://github.com/victoriamnx/Faq-Accordion-Card/assets/96449803/7e7b1230-1b23-4efd-9522-004aaf1dda1f)
+![image](https://github.com/victoriamnx/Faq-Accordion-Card/assets/96449803/28a3926e-48f7-4828-9e02-c0fc8ec6c14c)
 
 # Links
 
@@ -27,5 +28,5 @@ Coming soon
 # Author
 
 - Name - Victória Nogueira
-- Frontend Mentor [Profile](https://www.frontendmentor.io/profile/victoriamnx)
-- GitHub [Profile](https://github.com/victoriamnx)
+- [Frontend Mentor Profile](https://www.frontendmentor.io/profile/victoriamnx)
+- [GitHub Profile](https://github.com/victoriamnx)
